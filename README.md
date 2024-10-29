@@ -33,29 +33,33 @@ Below is a list of existing extension points where you can plug in your custom c
 12. clickAndCollectComponent 
 
 Callback Extension Points:
-1. onLogin 
-2. onSetShippingStep 
-3. onHandleCartData 
-4. onBraintreeExpressInit 
-5. onUserProceed 
-6. onSubmitShippingOptionAgeCheck 
-7. onEditAddress 
-8. onDeliveryTabEvent 
-9. getCrossSellsHeader 
-10. getAppliedCoupons 
-11. onShippingMethodMounted 
-12. getRewardPoints 
-13. getPrices 
-14. getItems 
-15. getPaymentMethods 
-16. getIsVirtual 
-17. getShippingAddresses 
-18. getGiftWrapping 
-19. getGiftCards 
-20. getFullCart 
-21. getBillingAddress 
-22. getStoreCredit 
+1. onLogin
+2. onSetShippingStep
+3. onHandleCartData
+4. onBraintreeExpressInit
+5. onUserProceed
+6. onSubmitShippingOptionAgeCheck
+7. onEditAddress
+8. onDeliveryTabEvent
+9. getCrossSellsHeader
+10. getAppliedCoupons
+11. onShippingMethodMounted
+12. getRewardPoints
+13. getPrices
+14. getItems
+15. getPaymentMethods
+16. getIsVirtual
+17. getShippingAddresses
+18. getGiftWrapping
+19. getGiftCards
+20. getFullCart
+21. getBillingAddress
+22. getStoreCredit
 23. onStepCreated
+24. belowEmailFieldExtension
+25. onCreate
+26. onPaymentDataChanged
+27. getShippingMethods
 
 Once you have completed the setup, follow these steps to build your code:
 
