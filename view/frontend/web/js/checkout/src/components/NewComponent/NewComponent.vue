@@ -3,9 +3,6 @@
 </template>
 
 <script>
-// Helpers
-import loadFromCheckout from '../../helpers/loadFromCheckout';
-
 export default {
   name: 'NewComponent',
 };
