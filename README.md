@@ -73,3 +73,23 @@ npm install
 3. Build the project:
 npm run build
 
+## CircleCi
+
+CircleCi is a tool for us to use to allow for tested to be run on our modules before they are deployed.
+
+This template comes with EsLint and PHPStan.
+
+You can add more tests to this if you need to.
+
+
+### Testing your module locally
+
+You can test CircleCi before you push your code.
+
+To do this you need to install circleci locally.
+
+``` brew install circleci```
+
+Then once this has been installed in the main directory of your package then.
+
+```circleci local execute```
