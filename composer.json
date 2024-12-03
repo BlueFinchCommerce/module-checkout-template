@@ -1,5 +1,5 @@
 {
-  "name": "gene/module-better-checkout-new-module-template",
+  "name": "gene/module-better-checkout-new-module",
   "description": "",
   "type": "magento2-module",
   "autoload": {
