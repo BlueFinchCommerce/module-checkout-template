@@ -1,4 +1,5 @@
-![CircleCI](https://dl.circleci.com/status-badge/img/gh/genecommerce/better-checkout-new-module-template/tree/main.svg?style=svg&circle-token=CCIPRJ_MyaGqRZPJU9B3scfCpNUet_ba0218df02ddad960a21e0b7f421435d4e364ebe)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/genecommerce/better-checkout-new-module-template/tree/main.svg?style=svg&circle-token=CCIPRJ_MyaGqRZPJU9B3scfCpNUet_ba0218df02ddad960a21e0b7f421435d4e364ebe)](https://dl.circleci.com/status-badge/redirect/gh/genecommerce/better-checkout-new-module-template/tree/main)
+
 
 ![Better Checkout Powered by GENE](./assets/logo.svg)
 
