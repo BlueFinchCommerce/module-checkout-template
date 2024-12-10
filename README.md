@@ -1,7 +1,13 @@
-Gene Better Checkout Module - Example Extension
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/genecommerce/better-checkout-new-module-template/tree/main.svg?style=svg&circle-token=CCIPRJ_MyaGqRZPJU9B3scfCpNUet_ba0218df02ddad960a21e0b7f421435d4e364ebe)](https://dl.circleci.com/status-badge/redirect/gh/genecommerce/better-checkout-new-module-template/tree/main)
+
+
+![Better Checkout Powered by GENE](./assets/logo.svg)
+
+# Gene Better Checkout Module - Example Extension
+
 This module serves as an example of how to create a custom extension for the Gene Better Checkout module.
 
-Getting Started
+## Getting Started
 To use this functionality, follow these steps:
 
 1. PHTML Integration
@@ -16,21 +22,21 @@ After setting up your .phtml file, navigate to the view/frontend/js/checkout/src
 4. Register the Component or Callback
 To use your custom component or callback, you need to register it as a functionExtension or componentExtension in the Gene Better Checkout module.
 
-Available Extension Points
+## Available Extension Points
 Below is a list of existing extension points where you can plug in your custom components or callbacks.
 
-1. additionalPaymentMethod 
-2. additionalPaymentMethodsPrimary 
-3. additionalVaultedMethod 
-4. ageCheckerExtension 
-5. footerPaymentIcon 
-6. belowShippingMethodsExtension 
-7. additionalShippingMethod 
-8. shippingMethodAdditionalContainer 
-9. paymentIcon 
-10. orderSummaryMessagesContainer 
-11. expressPaymentMethod 
-12. clickAndCollectComponent 
+1. additionalPaymentMethod
+2. additionalPaymentMethodsPrimary
+3. additionalVaultedMethod
+4. ageCheckerExtension
+5. footerPaymentIcon
+6. belowShippingMethodsExtension
+7. additionalShippingMethod
+8. shippingMethodAdditionalContainer
+9. paymentIcon
+10. orderSummaryMessagesContainer
+11. expressPaymentMethod
+12. clickAndCollectComponent
 
 Callback Extension Points:
 1. onLogin
@@ -69,3 +75,24 @@ cd view/frontend/js/checkout
 npm install
 3. Build the project:
 npm run build
+
+## CircleCi
+
+CircleCi is a tool for us to use to allow for tested to be run on our modules before they are deployed.
+
+This template comes with EsLint and PHPStan.
+
+You can add more tests to this if you need to.
+
+
+### Testing your module locally
+
+You can test CircleCi before you push your code.
+
+To do this you need to install circleci locally.
+
+``` brew install circleci```
+
+Then once this has been installed in the main directory of your package then.
+
+```circleci local execute```
