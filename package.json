@@ -1,0 +1,23 @@
+{
+  "name": "gene-better-checkout-new-module-template",
+  "description": "",
+  "main": ".eslintrc",
+  "scripts": {
+    "lint": "eslint . --rulesdir ./vendor/magento/magento-coding-standard/eslint/rules",
+    "lint-fix": "eslint . --rulesdir ./vendor/magento/magento-coding-standard/eslint/rules --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genecommerce/better-checkout-new-module-template-module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genecommerce/better-checkout-new-module-template/issues"
+  },
+  "homepage": "https://github.com/genecommerce/better-checkout-new-module-template#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  }
+}
+  
