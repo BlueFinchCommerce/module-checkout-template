@@ -5,9 +5,11 @@
  * @var \Gene\BetterCheckout\ViewModel\Assets $assetViewModel
  */
 
-$onNewCallback = $block->getViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/callbacks/onNewCallback.min.js');
-$newComponent = $block->getViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/components/NewComponent/NewComponent.min.js');
-$styles = $block->getViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/styles.css');
+$assetViewModel = $block->getAssetViewModel();
+
+$onNewCallback = $assetViewModel->getDistViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/callbacks/onNewCallback.min.js');
+$newComponent = $assetViewModel->getDistViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/components/NewComponent/NewComponent.min.js');
+$styles = $assetViewModel->getDistViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/styles.css');
 ?>
 
 <script>
