@@ -1,5 +1,5 @@
 {
-  "name": "gene-better-checkout-new-module-template",
+  "name": "bluefinch-checkout-new-module-template",
   "description": "",
   "main": ".eslintrc",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/genecommerce/better-checkout-new-module-template-module.git"
+    "url": "git+https://github.com/bluefinchcommerce/checkout-new-module-template-module.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/genecommerce/better-checkout-new-module-template/issues"
+    "url": "https://github.com/bluefinchcommerce/checkout-new-module-template/issues"
   },
-  "homepage": "https://github.com/genecommerce/better-checkout-new-module-template#readme",
+  "homepage": "https://github.com/bluefinchcommerce/checkout-new-module-template#readme",
   "devDependencies": {
     "eslint": "^8.50.0"
   }
