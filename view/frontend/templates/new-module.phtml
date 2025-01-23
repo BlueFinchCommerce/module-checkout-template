@@ -2,24 +2,24 @@
 /**
  * @var \Magento\Framework\View\Element\Template $block
  * @var \Magento\Framework\Escaper $escaper
- * @var \Gene\BetterCheckout\ViewModel\Assets $assetViewModel
+ * @var \BlueFinch\Checkout\ViewModel\Assets $assetViewModel
  */
 
 $assetViewModel = $block->getAssetViewModel();
 
-$onNewCallback = $assetViewModel->getDistViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/callbacks/onNewCallback.min.js');
-$newComponent = $assetViewModel->getDistViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/components/NewComponent/NewComponent.min.js');
-$styles = $assetViewModel->getDistViewFileUrl('Gene_BetterCheckoutNewModule::js/checkout/dist/styles.css');
+$onNewCallback = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/callbacks/onNewCallback.min.js');
+$newComponent = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/NewComponent/NewComponent.min.js');
+$styles = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/styles.css');
 ?>
 
 <script>
-    window.geneCheckout = window.geneCheckout || {};
-    window.geneCheckout.callbacks = window.geneCheckout.callbacks || {};
-    window.geneCheckout.callbacks.onNewCallback = window.geneCheckout.callbacks.onNewCallback || {};
-    window.geneCheckout.newComponent = window.geneCheckout.newComponent || {};
+    window.bluefinchCheckout = window.bluefinchCheckout || {};
+    window.bluefinchCheckout.callbacks = window.bluefinchCheckout.callbacks || {};
+    window.bluefinchCheckout.callbacks.onNewCallback = window.bluefinchCheckout.callbacks.onNewCallback || {};
+    window.bluefinchCheckout.newComponent = window.bluefinchCheckout.newComponent || {};
 
-    window.geneCheckout.callbacks.onNewCallback.onNewCallbackEvent = "<?= $escaper->escapeJs($onNewCallback) ?>";
-    window.geneCheckout.newComponent.newComponentPath = "<?= $escaper->escapeJs($newComponent) ?>";
+    window.bluefinchCheckout.callbacks.onNewCallback.onNewCallbackEvent = "<?= $escaper->escapeJs($onNewCallback) ?>";
+    window.bluefinchCheckout.newComponent.newComponentPath = "<?= $escaper->escapeJs($newComponent) ?>";
 </script>
 
 <link rel="stylesheet" href="<?= $escaper->escapeHtmlAttr($styles) ?>" />

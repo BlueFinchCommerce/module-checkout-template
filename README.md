@@ -1,11 +1,11 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/genecommerce/better-checkout-new-module-template/tree/main.svg?style=svg&circle-token=CCIPRJ_MyaGqRZPJU9B3scfCpNUet_ba0218df02ddad960a21e0b7f421435d4e364ebe)](https://dl.circleci.com/status-badge/redirect/gh/genecommerce/better-checkout-new-module-template/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/bluefinchcommerce/checkout-new-module-template/tree/main.svg?style=svg&circle-token=CCIPRJ_MyaGqRZPJU9B3scfCpNUet_ba0218df02ddad960a21e0b7f421435d4e364ebe)](https://dl.circleci.com/status-badge/redirect/gh/bluefinchcommerce/checkout-new-module-template/tree/main)
 
 
-![Better Checkout Powered by GENE](./assets/logo.svg)
+![Checkout Powered by BlueFinch](./assets/logo.svg)
 
-# Gene Better Checkout Module - Example Extension
+# BlueFinch Checkout Module - Example Extension
 
-This module serves as an example of how to create a custom extension for the Gene Better Checkout module.
+This module serves as an example of how to create a custom extension for the BlueFinch Checkout module.
 
 ## Getting Started
 To use this functionality, follow these steps:
@@ -20,7 +20,7 @@ Your .phtml file should already be added to the checkout layout. You just need t
 After setting up your .phtml file, navigate to the view/frontend/js/checkout/src directory. Here, you can create new callbacks or components with custom names.
 
 4. Register the Component or Callback
-To use your custom component or callback, you need to register it as a functionExtension or componentExtension in the Gene Better Checkout module.
+To use your custom component or callback, you need to register it as a functionExtension or componentExtension in the BlueFinch Checkout module.
 
 ## Available Extension Points
 Below is a list of existing extension points where you can plug in your custom components or callbacks.
