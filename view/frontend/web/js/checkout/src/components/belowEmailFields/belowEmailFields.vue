@@ -1,5 +1,5 @@
 <template>
-  <p>NewComponent</p>
+  <p class="new-component">New Component - belowEmailFields</p>
 </template>
 
 <script>
