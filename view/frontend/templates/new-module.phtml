@@ -7,19 +7,26 @@
 
 $assetViewModel = $block->getAssetViewModel();
 
-$onNewCallback = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/callbacks/onNewCallback.min.js');
-$newComponent = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/NewComponent/NewComponent.min.js');
+$belowEmailFields = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/belowEmailFields/belowEmailFields.min.js');
+$onStepsCreated = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/callbacks/onStepsCreated.min.js');
+
 $styles = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/styles.css');
 ?>
 
 <script>
+    // bluefinchCheckout namespace
     window.bluefinchCheckout = window.bluefinchCheckout || {};
-    window.bluefinchCheckout.callbacks = window.bluefinchCheckout.callbacks || {};
-    window.bluefinchCheckout.callbacks.onNewCallback = window.bluefinchCheckout.callbacks.onNewCallback || {};
-    window.bluefinchCheckout.newComponent = window.bluefinchCheckout.newComponent || {};
 
-    window.bluefinchCheckout.callbacks.onNewCallback.onNewCallbackEvent = "<?= $escaper->escapeJs($onNewCallback) ?>";
-    window.bluefinchCheckout.newComponent.newComponentPath = "<?= $escaper->escapeJs($newComponent) ?>";
+    // bluefinchCheckout component extension point namespace
+    window.bluefinchCheckout.belowEmailFields = window.bluefinchCheckout.belowEmailFields || {};
+    window.bluefinchCheckout.belowEmailFields.myModuleBelowEmailFields = "<?= $escaper->escapeJs($belowEmailFields) ?>";
+
+    // bluefinchCheckout callbacks extension point namespace
+    window.bluefinchCheckout.callbacks = window.bluefinchCheckout.callbacks || {};
+
+    // bluefinchCheckout callbacks extension point events namespace
+    window.bluefinchCheckout.callbacks.onStepsCreated = window.bluefinchCheckout.callbacks.onStepsCreated || {};
+    window.bluefinchCheckout.callbacks.onStepsCreated.myModuleOnStepsCreated = "<?= $escaper->escapeJs($onStepsCreated) ?>";
 </script>
 
 <link rel="stylesheet" href="<?= $escaper->escapeHtmlAttr($styles) ?>" />
