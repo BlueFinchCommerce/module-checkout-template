@@ -1,21 +1,5 @@
-#gene-better-checkout-root #specified-day .divider-line {
-  border-top: var(--divider__border);
-  margin-top: var(--indent__base);
-}
-#gene-better-checkout-root #specified-day .shipping-method__label {
-  display: block;
-}
-#gene-better-checkout-root #specified-day .header {
-  display: flex;
-}
-#gene-better-checkout-root #specified-day .am-delivery-checkbox {
-  margin-top: var(--indent__base);
-}
-#gene-better-checkout-root #specified-day .am-delivery-container {
-  display: flex;
-  align-items: center;
-}
-#gene-better-checkout-root #specified-day .am-delivery-details {
-  position: relative;
-  top: 10px;
+#bluefinch-checkout-root .new-component {
+  background-color: var(--color__semantic-success-light);
+  border: 1px solid var(--color__semantic-success);
+  padding: var(--indent__s);
 }
