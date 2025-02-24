@@ -8,6 +8,7 @@
 $assetViewModel = $block->getAssetViewModel();
 
 $belowEmailFields = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/belowEmailFields/belowEmailFields.min.js');
+$expressPaymentMethod = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/expressPayment/ExpressPayment.min.js');
 $onStepsCreated = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/callbacks/onStepsCreated.min.js');
 
 $styles = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/styles.css');
@@ -20,6 +21,10 @@ $styles = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/c
     // bluefinchCheckout component extension point namespace
     window.bluefinchCheckout.belowEmailFields = window.bluefinchCheckout.belowEmailFields || {};
     window.bluefinchCheckout.belowEmailFields.myModuleBelowEmailFields = "<?= $escaper->escapeJs($belowEmailFields) ?>";
+
+    // bluefinch express payment method extension
+    window.bluefinchCheckout.expressPaymentMethods = window.bluefinchCheckout.expressPaymentMethods || {};
+    window.bluefinchCheckout.expressPaymentMethods.myModuleExpressPaymentMethod = "<?= $escaper->escapeJs($expressPaymentMethod) ?>";
 
     // bluefinchCheckout callbacks extension point namespace
     window.bluefinchCheckout.callbacks = window.bluefinchCheckout.callbacks || {};
