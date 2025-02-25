@@ -27,6 +27,6 @@ export default {
     await cartStore.getCart();
 
     console.log(cartStore.cart);
-  }
+  },
 };
 </script>
