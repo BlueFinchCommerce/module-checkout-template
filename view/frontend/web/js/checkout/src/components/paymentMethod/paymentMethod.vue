@@ -1,13 +1,13 @@
 <template>
-  <p class="new-component">New Component - Express Payment</p>
+  <p class="new-component">New Component - Payment Method</p>
 </template>
 
 <script>
 export default {
-  name: 'Express Payment',
+  name: 'Payment Method',
   data() {
     return {
-      key: 'exampleExpressMethod',
+      key: 'examplePaymentMethod',
     };
   },
   async created() {
