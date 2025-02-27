@@ -16,7 +16,6 @@ export default {
       paymentStore,
     ] = await window.bluefinchCheckout.helpers.loadFromCheckout([
       'stores.useCartStore',
-      'stores.useConfigStore',
       'stores.usePaymentStore',
     ]);
 
