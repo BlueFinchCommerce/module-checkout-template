@@ -1,4 +1,4 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/BlueFinchCommerce/module-checkout-template/tree/develop.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/BlueFinchCommerce/module-checkout-template/tree/develop)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/BlueFinchCommerce/module-checkout-template/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/BlueFinchCommerce/module-checkout-template/tree/main)
 
 ![Checkout Powered by BlueFinch](./assets/logo.svg)
 
