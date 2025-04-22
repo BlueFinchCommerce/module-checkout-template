@@ -3,40 +3,43 @@
  * @var \Magento\Framework\View\Element\Template $block
  * @var \Magento\Framework\Escaper $escaper
  * @var \BlueFinch\Checkout\ViewModel\Assets $assetViewModel
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
  */
 
 $assetViewModel = $block->getAssetViewModel();
 
-$belowEmailFields = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/belowEmailFields/belowEmailFields.min.js');
-$expressPaymentMethod = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/expressPayment/expressPayment.min.js');
-$paymentMethod = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/paymentMethod/paymentMethod.min.js');
-$onStepsCreated = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/callbacks/onStepsCreated.min.js');
+$belowEmailFields      = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/belowEmailFields/belowEmailFields.min.js');
+$expressPaymentMethod  = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/expressPayment/expressPayment.min.js');
+$paymentMethod         = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/components/paymentMethod/paymentMethod.min.js');
+$onStepsCreated        = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/callbacks/onStepsCreated.min.js');
 
 $styles = $assetViewModel->getDistViewFileUrl('BlueFinch_CheckoutNewModule::js/checkout/dist/styles.css');
-?>
 
-<script>
+// Build inline script with CSP-safe renderer
+$scriptString = <<<script
+
     // bluefinchCheckout namespace
     window.bluefinchCheckout = window.bluefinchCheckout || {};
 
-    // bluefinchCheckout component extension point namespace
+    // belowEmailFields extension point
     window.bluefinchCheckout.belowEmailFields = window.bluefinchCheckout.belowEmailFields || {};
-    window.bluefinchCheckout.belowEmailFields.myModuleBelowEmailFields = "<?= $escaper->escapeJs($belowEmailFields) ?>";
+    window.bluefinchCheckout.belowEmailFields.myModuleBelowEmailFields = "{$escaper->escapeJs($belowEmailFields)}";
 
-    // bluefinch express payment method extension
+    // express payment method extension
     window.bluefinchCheckout.expressPaymentMethods = window.bluefinchCheckout.expressPaymentMethods || {};
-    window.bluefinchCheckout.expressPaymentMethods.myModuleExpressPaymentMethod = "<?= $escaper->escapeJs($expressPaymentMethod) ?>";
+    window.bluefinchCheckout.expressPaymentMethods.myModuleExpressPaymentMethod = "{$escaper->escapeJs($expressPaymentMethod)}";
 
-    // bluefinch payment method extension
+    // payment method extension
     window.bluefinchCheckout.paymentMethods = window.bluefinchCheckout.paymentMethods || {};
-    window.bluefinchCheckout.paymentMethods.myModulePaymentMethod = "<?= $escaper->escapeJs($paymentMethod) ?>";
+    window.bluefinchCheckout.paymentMethods.myModulePaymentMethod = "{$escaper->escapeJs($paymentMethod)}";
 
-    // bluefinchCheckout callbacks extension point namespace
+    // callbacks extension point
     window.bluefinchCheckout.callbacks = window.bluefinchCheckout.callbacks || {};
-
-    // bluefinchCheckout callbacks extension point events namespace
     window.bluefinchCheckout.callbacks.onStepsCreated = window.bluefinchCheckout.callbacks.onStepsCreated || {};
-    window.bluefinchCheckout.callbacks.onStepsCreated.myModuleOnStepsCreated = "<?= $escaper->escapeJs($onStepsCreated) ?>";
-</script>
+    window.bluefinchCheckout.callbacks.onStepsCreated.myModuleOnStepsCreated = "{$escaper->escapeJs($onStepsCreated)}";
+
+script;
+?>
+<?= /* @noEscape */ $secureRenderer->renderTag('script', [], $scriptString, false) ?>
 
 <link rel="stylesheet" href="<?= $escaper->escapeHtmlAttr($styles) ?>" />
